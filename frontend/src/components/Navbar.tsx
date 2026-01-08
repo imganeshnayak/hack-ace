@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,10 +21,10 @@ const Navbar: React.FC = () => {
                     </nav>
                     {/* CTA */}
                     <div className="hidden md:flex items-center gap-4">
-                        <a className="text-sm font-medium text-white hover:text-primary transition-colors" href="#">Log In</a>
-                        <button className="bg-primary hover:bg-primary-dark text-background-dark text-sm font-bold py-2.5 px-5 rounded-lg transition-all shadow-neon hover:shadow-lg hover:scale-105">
+                        <Link className="text-sm font-medium text-white hover:text-primary transition-colors" to="/login">Log In</Link>
+                        <Link to="/register" className="bg-primary hover:bg-primary-dark text-background-dark text-sm font-bold py-2.5 px-5 rounded-lg transition-all shadow-neon hover:shadow-lg hover:scale-105">
                             Get Started
-                        </button>
+                        </Link>
                     </div>
                     {/* Mobile menu button */}
                     <div className="md:hidden">

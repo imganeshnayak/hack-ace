@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
     return (
@@ -22,10 +23,10 @@ const Hero: React.FC = () => {
                             JobTwin uses advanced neural networks to simulate interviews, optimize your resume against ATS bots, and bridge your skill gaps in real-time.
                         </p>
                         <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
-                            <button className="flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-background-dark text-base font-bold h-12 px-8 rounded-lg transition-all shadow-neon hover:shadow-lg">
+                            <Link to="/register" className="flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-background-dark text-base font-bold h-12 px-8 rounded-lg transition-all shadow-neon hover:shadow-lg">
                                 <span className="material-symbols-outlined text-[20px]">add_circle</span>
                                 Create Your Twin
-                            </button>
+                            </Link>
                             <button className="flex items-center justify-center gap-2 bg-surface-dark hover:bg-surface-darker text-white border border-gray-700 hover:border-primary/50 text-base font-bold h-12 px-8 rounded-lg transition-all">
                                 <span className="material-symbols-outlined text-[20px]">play_circle</span>
                                 View Demo

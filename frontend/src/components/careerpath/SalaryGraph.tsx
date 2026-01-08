@@ -1,6 +1,13 @@
 import React from 'react';
 
-const SalaryGraph: React.FC = () => {
+interface SalaryGraphProps {
+    salary: {
+        current: number;
+        progression: Array<{ label: string; value: number }>;
+    };
+}
+
+const SalaryGraph: React.FC<SalaryGraphProps> = ({ salary }) => {
     return (
         <div className="rounded-xl border border-[#1e362e] bg-[#162b24] p-6">
             <div className="mb-4 flex items-center justify-between">
@@ -10,7 +17,7 @@ const SalaryGraph: React.FC = () => {
                 </div>
                 <div className="text-right">
                     <p className="text-xs text-gray-400">Senior Level</p>
-                    <p className="text-xl font-bold text-primary">$165k</p>
+                    <p className="text-xl font-bold text-primary">${(salary.current / 1000).toFixed(0)}k</p>
                 </div>
             </div>
             {/* CSS Chart Representation */}
@@ -22,7 +29,7 @@ const SalaryGraph: React.FC = () => {
                     <div className="border-b border-white/5 pb-1">100k</div>
                     <div className="border-b border-white/5 pb-1">60k</div>
                 </div>
-                {/* Line Graph SVG */}
+                {/* Line Graph SVG - Static for now but could be dynamic based on points if needed */}
                 <svg className="absolute inset-0 h-full w-full overflow-visible" preserveAspectRatio="none">
                     <defs>
                         <linearGradient id="gradientArea" x1="0" x2="0" y1="0" y2="1">
@@ -39,9 +46,9 @@ const SalaryGraph: React.FC = () => {
                 </svg>
                 {/* X Axis Labels */}
                 <div className="absolute -bottom-6 left-0 right-0 flex justify-between text-xs text-gray-500 font-mono">
-                    <span>Entry</span>
-                    <span>Mid-Level</span>
-                    <span>Senior</span>
+                    {salary.progression.map((item, index) => (
+                        <span key={index}>{item.label}</span>
+                    ))}
                 </div>
             </div>
         </div>

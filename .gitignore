@@ -1,0 +1,57 @@
+### Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnp.*
+.pnp.js
+
+# Optional npm cache
+.npm
+
+### Env
+.env
+.env.local
+.env.*.local
+
+### Build outputs
+/dist
+/build
+/out
+/coverage
+
+### Backend & frontend specifics
+/backend/node_modules
+/frontend/node_modules
+/frontend/dist
+/frontend/build
+
+### Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+### OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+### IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+### Editor temp files
+*~
+.swp
+
+### Misc
+.cache/
+.envrc
+.parcel-cache
+.next
