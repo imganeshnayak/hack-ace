@@ -11,12 +11,17 @@ import SkillValidator from './pages/SkillValidator';
 import AIInterviewCoach from './pages/AIInterviewCoach';
 import Opportunities from './pages/Opportunities';
 
+import Login from './pages/Login';
+import Register from './pages/Register';
+
 function App() {
   return (
     <Router>
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
         {/* Protected/Dashboard Routes */}
         <Route path="/dashboard" element={<DashboardLayout />}>
