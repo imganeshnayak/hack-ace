@@ -10,6 +10,7 @@ import CareerPath from './pages/CareerPath';
 import SkillValidator from './pages/SkillValidator';
 import AIInterviewCoach from './pages/AIInterviewCoach';
 import Opportunities from './pages/Opportunities';
+import ProfilePage from './pages/ProfilePage';
 
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -33,6 +34,7 @@ function App() {
           <Route path="challenge" element={<SkillValidator />} />
           <Route path="interview" element={<AIInterviewCoach />} />
           <Route path="jobs" element={<Opportunities />} />
+          <Route path="profile" element={<ProfilePage />} />
         </Route>
 
         {/* Fallback */}

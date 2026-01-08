@@ -85,13 +85,13 @@ const DashboardLayout: React.FC = () => {
                     </div>
                     {/* Bottom Actions */}
                     <div className="flex flex-col gap-2">
-                        <div className="flex items-center gap-3 px-3 py-4 mt-2 border-t border-[#283933]">
+                        <Link to="/dashboard/profile" className="flex items-center gap-3 px-3 py-4 mt-2 border-t border-[#283933] hover:bg-surface-dark transition-colors group">
                             <div className="size-8 rounded-full bg-cover bg-center" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdzTBDSGVjVLwi26O5_FdQk55ysluyVGtzNbQwWOR187DRTV_6v5TGyc5LV2L2z_fn5VTJWYkFVcjT1RSuXhMnQGM7UDodxNK4XEKpp4e11cDfKDUsyMdTA6UHM0p2Z4--P0l03daEPw5Go44i6ZfO-iOP25dnSD9GbTg99h-CQ4IUak3ovetX-TYCX5OiiWz7DdJyTEhr723tWiFG6oSzApCl8b5VUrfHvkUfYB7RPvb6f2ufC")' }}></div>
                             <div className="flex flex-col">
-                                <span className="text-sm font-bold text-white leading-none">Alex M.</span>
+                                <span className="text-sm font-bold text-white leading-none group-hover:text-primary transition-colors">Alex M.</span>
                                 <span className="text-xs text-gray-400 mt-1">Pro Member</span>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </aside>
