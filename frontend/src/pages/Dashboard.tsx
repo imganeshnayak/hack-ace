@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useUserStore } from '../store/useUserStore';
 import ResumeUpload from '../components/dashboard/ResumeUpload';
-import EmployabilityGauge from '../components/dashboard/EmployabilityGauge';
 import TwinAvatar from '../components/dashboard/TwinAvatar';
 import SkillRadarChart from '../components/dashboard/SkillRadarChart';
 import ReadinessBreakdown from '../components/dashboard/ReadinessBreakdown';
 
 const Dashboard: React.FC = () => {
-    const { name, resumeUploaded, employabilityScore } = useUserStore();
+    const { resumeUploaded, employabilityScore } = useUserStore();
 
     if (!resumeUploaded) {
         return (

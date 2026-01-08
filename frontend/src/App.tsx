@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import LandingPage from './pages/LandingPage';
 import DashboardLayout from './layouts/DashboardLayout';
 import Market from './pages/Market';
-import Placeholder from './components/Placeholder';
 import Dashboard from './pages/Dashboard';
 import SkillGapDetector from './pages/SkillGapDetector';
 import Roadmap from './pages/Roadmap';
